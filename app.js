@@ -9,7 +9,7 @@
 
 // ------------ VARIABLES Y CONSTANTES ----------------
 
-const user= prompt ("Ingrese su usuario");
+/* const user= prompt ("Ingrese su usuario");
 const pass= 1234;
 let puntajeuser= 0;
 
@@ -25,10 +25,10 @@ const polonia = new Equipo ("polonia", 4);
 const arabia = new Equipo ("arabia", 3);
 
 let grupoc = [argentina, mexico, polonia, arabia];
-
+ */
 // ----------- FUNCIONES ----------
-
-     function login (){
+/* 
+    function login (){
      while (pass == "1234") {
      let passlogin = prompt (`Bienvenido ${user} ! Ingrese su contraseña`);{
      if (passlogin == pass ) {
@@ -42,8 +42,8 @@ let grupoc = [argentina, mexico, polonia, arabia];
 }
 
 
-  function partido1 (){
-     let partido1= prompt (`Quien será el ganador entre Argentina vs Arabia ? argentina/arabia/empate`); /* MINUSCULAS */
+    function partido1 (){
+     let partido1= prompt (`Quien será el ganador entre Argentina vs Arabia ? argentina/arabia/empate`); 
      if (partido1.toLowerCase() === "arabia") {
          let resultado1 = 3;
          return resultado1;
@@ -55,7 +55,7 @@ let grupoc = [argentina, mexico, polonia, arabia];
     
  }
 
-     function partido2 (){
+    function partido2 (){
      let partido2= prompt (`Quien será el ganador entre Mexico vs Polonia ? mexico/polonia/empate`);
      if (partido2.toLowerCase() === "empate") {
          let resultado2 = 3;
@@ -79,7 +79,7 @@ let grupoc = [argentina, mexico, polonia, arabia];
     }
 }
 
-function partido4 (){
+    function partido4 (){
     let partido4= prompt (`Quien será el ganador entre Polonia vs Arabia ? polonia/arabia/empate`);
     if (partido4.toLowerCase() === "polonia") {
         let resultado2 = 3;
@@ -91,7 +91,7 @@ function partido4 (){
     }
 }
 
-function partido5 (){
+    function partido5 (){
     let partido5= prompt (`Quien será el ganador entre Polonia vs Argentina ? polonia/argentina/empate`);
     if (partido5.toLowerCase() === "polonia") {
         let resultado2 = 3;
@@ -103,7 +103,7 @@ function partido5 (){
     }
 }
 
-function partido6 (){
+    function partido6 (){
     let partido6= prompt (`Quien será el ganador entre Arabia vs Mexico ? arabia/mexico/empate`);
     if (partido6.toLowerCase() === "mexico") {
         let resultado2 = 3;
@@ -114,20 +114,67 @@ function partido6 (){
         return resultado2;
     }
 }
+ */
+    /* EVENTOS */
+const restabtn = document.querySelector("#btnrestap1e1");
+const sumabtn = document.querySelector("#btnsumap1e1");
+
+sumabtn.addEventListener("click",suma);
+restabtn.addEventListener("click",resta);
+
+let golesp1e1 = 0;
+
+    function resta (){
+    golesp1e1 -= 1;
+    document.querySelector("#pronosticop1e1").innerHTML = golesp1e1;
+    }
+    function suma (){
+    golesp1e1 += 1;
+    document.querySelector("#pronosticop1e1").innerHTML = golesp1e1;
+    }
+
+
+
+/* const resta = document.querySelector("#btn-p1e1");
+const suma = document.querySelector("#btn+p1e1");
+let pronop1e1 = 0;
+
+suma.addEventListener("click", sumapron);
+
+function sumapron (){
+    pronosticop1e1 = pronosticop1e1 + 1;
+    document.querySelector("#pronosticop1e1").innerHTML=pronop1e1;
+}
+
+
+
+
+
+resta.addEventListener("click", restapron);
+
+function restapron (){
+    pronosticop1e1 -= 1;
+}
+ */
+
+
+
+
+
 
     //  -----------FLUJO--------------
 
- login();
+ /* login();
 
  alert (`Bienvenido ${user} al prode del Mundial Qatar 2022. Por cada pronostico acertado sumaras 3 puntos`)
 
  puntajeuser = partido1() + partido2() + partido3() + partido4() + partido5() + partido6();
-
+ */
     // -----ACA HAGAMOS DE CUENTA QUE SE ESTAN JUGANDO LOS PARTIDOS ------
-
+/* 
  alert (`Tu puntaje final es de ${puntajeuser}`);
 
 
 let equipoConsulta = prompt ("De que equipo quiere consultar el puntaje ? Argentina/Arabia/Polonia/Mexico (solo en minusculas)");
 
-console.log (grupoc.find ((grupo) => grupo.nombre === equipoConsulta));
+console.log (grupoc.find ((grupo) => grupo.nombre === equipoConsulta)); */

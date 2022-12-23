@@ -1,0 +1,29 @@
+.container {
+    border: solid red 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.equipo {
+    border: solid blue 2px;
+    width: 15rem;
+
+}
+
+.pronostico {
+    display: flex;
+    justify-content: space-around;
+}
+
+.pronostico-btn {
+    width: 3rem;
+}
+
+p {
+    text-align: center;
+}
+
+.partido {
+    display: flex;
+}
