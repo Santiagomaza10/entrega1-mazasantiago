@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Document</title>
 </head>
 <body>
@@ -13,50 +14,64 @@
         <!-- PARTIDO 1 -->
 
         <article class="partido">
-
-        <div class="equipo">
-            <p>Argentina</p>
-            <div class="pronostico">
-                <input type="button" class="pronostico-btn" value="-" id="btnrestap1e1">
-                <p id="pronosticop1e1">-</p>
-                <input type="button" class="pronostico-btn" value="+" id="btnsumap1e1">
+            <div class="partido-resultado">
+                <p>Ingrese el nombre del ganador</p>
+                <form action="">
+                <input type="text" placeholder="Argentina/Arabia/Empate" id="resultado1">
+                <input type="submit" value="guardar">
+                </form>
             </div>
 
-            <div class="resultado">
-                <p>-</p>
+        <div class="partido-equipos">    
+            <div class="equipo">
+                <p>Argentina</p>
+                <div class="pronostico">
+                    <button class="pronostico-btn" id="btnrestap1e1">-</button>
+                    <p id="pronosticop1e1">-</p>
+                    <button class="pronostico-btn" id="btnsumap1e1">+</button>
+                </div>
+
+                <div class="resultado">
+                    <p id="resultadop1e1">-</p>
+                </div>
+
             </div>
 
+            <div class="equipo">
+                <p>Arabia</p>
+                <div class="pronostico">
+                    <button class="pronostico-btn" id="btnrestap1e2">-</button>
+                    <p id="pronosticop1e2">-</p>
+                    <button class="pronostico-btn" id="btnsumap1e2">+</button>
+                </div>
+
+                <div class="resultado">
+                    <p id="resultadop1e2">-</p>
+                </div>
+
+            </div>
         </div>
-
-        <div class="equipo">
-            <p>Arabia</p>
-            <div class="pronostico">
-                <button class="pronostico-btn" id="btn-p1e2">-</button>
-                <p id="pronostico-p1e2">-</p>
-                <button class="pronostico-btn" id="btn+p1e2">+</button>
-            </div>
-
-            <div class="resultado">
-                <p>-</p>
-            </div>
-
-        </div>
+        
     </article>
 
             <!-- PARTIDO 2 -->
 
-    <article class="partido">
-
+        <article class="partido">
+            <div class="partido-resultado">
+                <p>Ingrese el nombre del ganador</p>
+                <input type="text" placeholder="Mexico/Polonia/Empate" id="resultado2">
+            </div>
+        <div class="partido-equipos">  
         <div class="equipo">
             <p>Mexico</p>
             <div class="pronostico">
-                <button class="pronostico-btn" id="btn-p2e1">-</button>
-                <p id="pronostico-p2e1">-</p>
-                <button class="pronostico-btn" id="btn+p2e1">+</button>
+                <button class="pronostico-btn" id="btnrestap2e1">-</button>
+                <p id="pronosticop2e1">-</p>
+                <button class="pronostico-btn" id="btnsumap2e1">+</button>
             </div>
 
             <div class="resultado">
-                <p>-</p>
+                <p id="resultadop2e1">-</p>
             </div>
 
         </div>
@@ -64,32 +79,39 @@
         <div class="equipo">
             <p>Polonia</p>
             <div class="pronostico">
-                <button class="pronostico-btn" id="btn-p2e2">-</button>
-                <p id="pronostico-p2e2">-</p>
-                <button class="pronostico-btn" id="btn+p2e2">+</button>
+                <button class="pronostico-btn" id="btnrestap2e2">-</button>
+                <p id="pronosticop2e2">-</p>
+                <button class="pronostico-btn" id="btnsumap2e2">+</button>
             </div>
 
             <div class="resultado">
-                <p>-</p>
+                <p id="resultadop2e2">-</p>
             </div>
 
         </div>
+    </div>
+
     </article>
 
         <!-- PARTIDO 3 -->
 
-    <article class="partido">
+        <article class="partido">
+            <div class="partido-resultado">
+                <p>Ingrese el nombre del ganador</p>
+                <input type="text" placeholder="Argentina/Mexico/Empate" id="resultado3">
+            </div>
 
+            <div class="partido-equipos">  
         <div class="equipo">
             <p>Argentina</p>
             <div class="pronostico">
-                <button class="pronostico-btn" id="btn-p3e1">-</button>
-                <p id="pronostico-p3e1">-</p>
-                <button class="pronostico-btn" id="btn+p3e1">+</button>
+                <button class="pronostico-btn" id="btnrestap3e1">-</button>
+                <p id="pronosticop3e1">-</p>
+                <button class="pronostico-btn" id="btnsumap3e1">+</button>
             </div>
 
             <div class="resultado">
-                <p>-</p>
+                <p id="resultadop3e1">-</p>
             </div>
 
         </div>
@@ -97,32 +119,38 @@
         <div class="equipo">
             <p>Mexico</p>
             <div class="pronostico">
-                <button class="pronostico-btn" id="btn-p3e2">-</button>
-                <p id="pronostico-p3e2">-</p>
-                <button class="pronostico-btn" id="btn+p3e2">+</button>
+                <button class="pronostico-btn" id="btnrestap3e2">-</button>
+                <p id="pronosticop3e2">-</p>
+                <button class="pronostico-btn" id="btnsumap3e2">+</button>
             </div>
 
             <div class="resultado">
-                <p>-</p>
+                <p id="resultadop3e2">-</p>
             </div>
 
         </div>
+    </div>
+
     </article>
 
         <!-- PARTIDO 4 -->
 
-    <article class="partido">
-
+        <article class="partido">
+            <div class="partido-resultado">
+                <p>Ingrese el nombre del ganador</p>
+                <input type="text" placeholder="Polonia/Arabia/Empate" id="resultado4">
+            </div>
+            <div class="partido-equipos">  
         <div class="equipo">
             <p>Polonia</p>
             <div class="pronostico">
-                <button class="pronostico-btn" id="btn-p4e1">-</button>
-                <p id="pronostico-p4e1">-</p>
-                <button class="pronostico-btn" id="btn+p4e1">+</button>
+                <button class="pronostico-btn" id="btnrestap4e1">-</button>
+                <p id="pronosticop4e1">-</p>
+                <button class="pronostico-btn" id="btnsumap4e1">+</button>
             </div>
 
             <div class="resultado">
-                <p>-</p>
+                <p id="resultadop4e1">-</p>
             </div>
 
         </div>
@@ -130,32 +158,38 @@
         <div class="equipo">
             <p>Arabia</p>
             <div class="pronostico">
-                <button class="pronostico-btn" id="btn-p4e2">-</button>
-                <p id="pronostico-p4e2">-</p>
-                <button class="pronostico-btn" id="btn+p4e2">+</button>
+                <button class="pronostico-btn" id="btnrestap4e2">-</button>
+                <p id="pronosticop4e2">-</p>
+                <button class="pronostico-btn" id="btnsumap4e2">+</button>
             </div>
 
             <div class="resultado">
-                <p>-</p>
+                <p id="resultadop4e2">-</p>
             </div>
 
         </div>
+    </div>
+
     </article>
 
         <!-- PARTIDO 5 -->
 
-    <article class="partido">
-
+        <article class="partido">
+            <div class="partido-resultado">
+                <p>Ingrese el nombre del ganador</p>
+                <input type="text" placeholder="Polonia/Argentina/Empate" id="resultado5">
+            </div>
+            <div class="partido-equipos">  
         <div class="equipo">
             <p>Polonia</p>
             <div class="pronostico">
-                <button class="pronostico-btn"  id="btn-p5e1">-</button>
-                <p id="pronostico-p5e1">-</p>
-                <button class="pronostico-btn" id="btn+p5e1">+</button>
+                <button class="pronostico-btn"  id="btnrestap5e1">-</button>
+                <p id="pronosticop5e1">-</p>
+                <button class="pronostico-btn" id="btnsumap5e1">+</button>
             </div>
 
             <div class="resultado">
-                <p>-</p>
+                <p id="resultadop5e1">-</p>
             </div>
 
         </div>
@@ -163,32 +197,38 @@
         <div class="equipo">
             <p>Argentina</p>
             <div class="pronostico">
-                <button class="pronostico-btn" id="btn-p5e2">-</button>
-                <p id="pronostico-p5e2">-</p>
-                <button class="pronostico-btn" id="btn+p5e2">+</button>
+                <button class="pronostico-btn" id="btnrestap5e2">-</button>
+                <p id="pronosticop5e2">-</p>
+                <button class="pronostico-btn" id="btnsumap5e2">+</button>
             </div>
 
             <div class="resultado">
-                <p>-</p>
+                <p id="resultadop5e2">-</p>
             </div>
 
         </div>
+    </div>
+
     </article>
 
         <!-- PARTIDO 6 -->
 
-    <article class="partido">
-
+        <article class="partido">
+            <div class="partido-resultado">
+                <p>Ingrese el nombre del ganador</p>
+                <input type="text" placeholder="Arabia/Mexico/Empate" id="resultado6">
+            </div>
+            <div class="partido-equipos">  
         <div class="equipo">
             <p>Arabia</p>
             <div class="pronostico">
-                <button class="pronostico-btn" id="btn-p6e1">-</button>
-                <p id="pronostico-p6e1">-</p>
-                <button class="pronostico-btn" id="btn+p6e1">+</button>
+                <button class="pronostico-btn" id="btnrestap6e1">-</button>
+                <p id="pronosticop6e1">-</p>
+                <button class="pronostico-btn" id="btnsumap6e1">+</button>
             </div>
 
             <div class="resultado">
-                <p>-</p>
+                <p id="resultadop6e1">-</p>
             </div>
 
         </div>
@@ -196,19 +236,29 @@
         <div class="equipo">
             <p>Mexico</p>
             <div class="pronostico">
-                <button class="pronostico-btn" id="btn-p6e2">-</button>
-                <p id="pronostico-p6e2">-</p>
-                <button class="pronostico-btn" id="btn+p6e2">+</button>
+                <button class="pronostico-btn" id="btnrestap6e2">-</button>
+                <p id="pronosticop6e2">-</p>
+                <button class="pronostico-btn" id="btnsumap6e2">+</button>
             </div>
 
             <div class="resultado">
-                <p>-</p>
+                <p id="resultadop6e2">-</p>
             </div>
 
         </div>
+    </div>
     </article>
 
     </section>
+
+    <section class="tablero">
+        <button id="guardar">Guardar Pronostico</button>
+        <button id="recuperar">Recuperar pronosticos guardados</button>
+        <button id="comparar">Comparar resultados</button>
+        <button id="reiniciar">Reiniciar Pronosticos</button>
+        <button>Mostrar mi puntaje</button>
+    </section>
+
 <script src="./app.js"></script>
 </body>
 </html>

@@ -25,5 +25,16 @@ p {
 }
 
 .partido {
-    display: flex;
+    display: block;
+    border: solid yellow 2px;
 }
+
+.partido-resultado {
+    display: flex;
+    flex-direction: column;
+}
+
+.partido-equipos {
+    display:flex;
+}
+
