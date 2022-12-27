@@ -460,8 +460,7 @@ let grupoc = [argentina, mexico, polonia, arabia];
 
     function sumaPuntaje (){
         puntajeuser = partido1 () + partido2() + partido3 () + partido4 () + partido5 () + partido6 ();
-        let div = document.createElement(`div`);
-        div.innerHTML = `<h1>Tu puntaje es de ${puntajeuser}</h1>`
+        document.querySelector("#puntaje").innerHTML = `Tu puntaje es de ${puntajeuser}`;
     }
     
     
