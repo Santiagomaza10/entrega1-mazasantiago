@@ -1,12 +1,11 @@
 .container {
-    border: solid red 2px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .equipo {
-    border: solid blue 2px;
+    border: solid black 2px;
     width: 15rem;
 
 }
@@ -26,7 +25,6 @@ p {
 
 .partido {
     display: block;
-    border: solid yellow 2px;
 }
 
 .partido-resultado {
@@ -38,3 +36,12 @@ p {
     display:flex;
 }
 
+.containerbtn {
+    display: flex;
+    justify-content: center;
+}
+
+.resultado {
+    display: flex;
+    justify-content: center;
+}

@@ -10,7 +10,7 @@
 /* 
 const user= prompt ("Ingrese su usuario");
 const pass= 1234; */
-let puntajeuser= 0;
+
 
 function Equipo(nombre, puntajeEquipo) {
     this.nombre = nombre;
@@ -40,83 +40,6 @@ let grupoc = [argentina, mexico, polonia, arabia];
      }
 }
  */
-    let ganador1 = document.querySelector ("#resultado1");
-
-    function partido1 (){
-     if (partido1.toLowerCase() === "arabia") {
-        let resultado1 = 3;
-        return resultado1;
-
-     } else {
-         let resultado1 = 0;
-         return resultado1;
-     }
-    
- }
-
-    function partido2 (){
-     let partido2= prompt (`Quien será el ganador entre Mexico vs Polonia ? mexico/polonia/empate`);
-     if (partido2.toLowerCase() === "empate") {
-         let resultado2 = 3;
-         return resultado2;
-
-     } else {
-         let resultado2 = 0;
-         return resultado2;
-     }
- }
-
-    function partido3 (){
-    let partido3= prompt (`Quien será el ganador entre Argentina vs Mexico ? argentina/mexico/empate`);
-    if (partido3.toLowerCase() === "argentina") {
-        let resultado2 = 3;
-        return resultado2;
-
-    } else {
-        let resultado2 = 0;
-        return resultado2;
-    }
-}
-
-    function partido4 (){
-    let partido4= prompt (`Quien será el ganador entre Polonia vs Arabia ? polonia/arabia/empate`);
-    if (partido4.toLowerCase() === "polonia") {
-        let resultado2 = 3;
-        return resultado2;
-
-    } else {
-        let resultado2 = 0;
-        return resultado2;
-    }
-}
-
-    function partido5 (){
-    let partido5= prompt (`Quien será el ganador entre Polonia vs Argentina ? polonia/argentina/empate`);
-    if (partido5.toLowerCase() === "polonia") {
-        let resultado2 = 3;
-        return resultado2;
-
-    } else {
-        let resultado2 = 0;
-        return resultado2;
-    }
-}
-
-    function partido6 (){
-    let partido6= prompt (`Quien será el ganador entre Arabia vs Mexico ? arabia/mexico/empate`);
-    if (partido6.toLowerCase() === "mexico") {
-        let resultado2 = 3;
-        return resultado2;
-
-    } else {
-        let resultado2 = 0;
-        return resultado2;
-    }
-}
-
-
-
-    
 
     /* EVENTOS */
     
@@ -369,18 +292,18 @@ let grupoc = [argentina, mexico, polonia, arabia];
     guardar.addEventListener("click", guardarPron);
 
     function guardarPron () {
-    localStorage.setItem ("golesp1e1", `${golesp1e1}`);
-    localStorage.setItem ("golesp1e2", `${golesp1e2}`);
-    localStorage.setItem ("golesp2e1", `${golesp2e1}`);
-    localStorage.setItem ("golesp2e2", `${golesp2e2}`);
-    localStorage.setItem ("golesp3e1", `${golesp3e1}`);
-    localStorage.setItem ("golesp3e2", `${golesp3e2}`);
-    localStorage.setItem ("golesp4e1", `${golesp4e1}`);
-    localStorage.setItem ("golesp4e2", `${golesp4e2}`);
-    localStorage.setItem ("golesp5e1", `${golesp5e1}`);
-    localStorage.setItem ("golesp5e2", `${golesp5e2}`);
-    localStorage.setItem ("golesp6e1", `${golesp6e1}`);
-    localStorage.setItem ("golesp6e2", `${golesp6e2}`);
+    localStorage.setItem ("golesp1e1", JSON.stringify(`${golesp1e1}`));
+    localStorage.setItem ("golesp1e2", JSON.stringify(`${golesp1e2}`));
+    localStorage.setItem ("golesp2e1", JSON.stringify(`${golesp2e1}`));
+    localStorage.setItem ("golesp2e2", JSON.stringify(`${golesp2e2}`));
+    localStorage.setItem ("golesp3e1", JSON.stringify(`${golesp3e1}`));
+    localStorage.setItem ("golesp3e2", JSON.stringify(`${golesp3e2}`));
+    localStorage.setItem ("golesp4e1", JSON.stringify(`${golesp4e1}`));
+    localStorage.setItem ("golesp4e2", JSON.stringify(`${golesp4e2}`));
+    localStorage.setItem ("golesp5e1", JSON.stringify(`${golesp5e1}`));
+    localStorage.setItem ("golesp5e2", JSON.stringify(`${golesp5e2}`));
+    localStorage.setItem ("golesp6e1", JSON.stringify(`${golesp6e1}`));
+    localStorage.setItem ("golesp6e2", JSON.stringify(`${golesp6e2}`));
     }
 
     /* RECUPERAR LOCAL STORAGE */
@@ -389,18 +312,18 @@ let grupoc = [argentina, mexico, polonia, arabia];
     recuperar.addEventListener("click", recuperarPron);
 
     function recuperarPron (){
-    document.querySelector("#pronosticop1e1").innerHTML = localStorage.getItem ("golesp1e1");
-    document.querySelector("#pronosticop1e2").innerHTML = localStorage.getItem ("golesp1e2");
-    document.querySelector("#pronosticop2e1").innerHTML = localStorage.getItem ("golesp2e1");
-    document.querySelector("#pronosticop2e2").innerHTML = localStorage.getItem ("golesp2e2");
-    document.querySelector("#pronosticop3e1").innerHTML = localStorage.getItem ("golesp3e1");
-    document.querySelector("#pronosticop3e2").innerHTML = localStorage.getItem ("golesp3e2");
-    document.querySelector("#pronosticop4e1").innerHTML = localStorage.getItem ("golesp4e1");
-    document.querySelector("#pronosticop4e2").innerHTML = localStorage.getItem ("golesp4e2");
-    document.querySelector("#pronosticop5e1").innerHTML = localStorage.getItem ("golesp5e1");
-    document.querySelector("#pronosticop5e2").innerHTML = localStorage.getItem ("golesp5e2");
-    document.querySelector("#pronosticop6e1").innerHTML = localStorage.getItem ("golesp6e1");
-    document.querySelector("#pronosticop6e2").innerHTML = localStorage.getItem ("golesp6e2");
+    document.querySelector("#pronosticop1e1").innerHTML = parseInt(JSON.parse(localStorage.getItem ("golesp1e1")));
+    document.querySelector("#pronosticop1e2").innerHTML = parseInt(JSON.parse(localStorage.getItem ("golesp1e2")));
+    document.querySelector("#pronosticop2e1").innerHTML = parseInt(JSON.parse(localStorage.getItem ("golesp2e1")));
+    document.querySelector("#pronosticop2e2").innerHTML = parseInt(JSON.parse(localStorage.getItem ("golesp2e2")));
+    document.querySelector("#pronosticop3e1").innerHTML = parseInt(JSON.parse(localStorage.getItem ("golesp3e1")));
+    document.querySelector("#pronosticop3e2").innerHTML = parseInt(JSON.parse(localStorage.getItem ("golesp3e2")));
+    document.querySelector("#pronosticop4e1").innerHTML = parseInt(JSON.parse(localStorage.getItem ("golesp4e1")));
+    document.querySelector("#pronosticop4e2").innerHTML = parseInt(JSON.parse(localStorage.getItem ("golesp4e2")));
+    document.querySelector("#pronosticop5e1").innerHTML = parseInt(JSON.parse(localStorage.getItem ("golesp5e1")));
+    document.querySelector("#pronosticop5e2").innerHTML = parseInt(JSON.parse(localStorage.getItem ("golesp5e2")));
+    document.querySelector("#pronosticop6e1").innerHTML = parseInt(JSON.parse(localStorage.getItem ("golesp6e1")));
+    document.querySelector("#pronosticop6e2").innerHTML = parseInt(JSON.parse(localStorage.getItem ("golesp6e2")));
     };
 
     
@@ -430,33 +353,142 @@ let grupoc = [argentina, mexico, polonia, arabia];
     /* COMPARAR RESULTADOS */
 
     const comparar = document.querySelector ("#comparar");
+    const resultadop1e1 = 1;
+    const resultadop1e2 = 2;
+    const resultadop2e1 = 0;
+    const resultadop2e2 = 0;
+    const resultadop3e1 = 2;
+    const resultadop3e2 = 0;
+    const resultadop4e1 = 2;
+    const resultadop4e2 = 0;
+    const resultadop5e1 = 1;
+    const resultadop5e2 = 2;
+    const resultadop6e1 = 0;
+    const resultadop6e2 = 2;
 
     comparar.addEventListener ("click", compararResultados);
 
     function compararResultados (){
-        document.querySelector("#resultadop1e1").innerHTML = 1;
-        document.querySelector("#resultadop1e2").innerHTML = 2;
-        document.querySelector("#resultadop2e1").innerHTML = 0;
-        document.querySelector("#resultadop2e2").innerHTML = 0;
-        document.querySelector("#resultadop3e1").innerHTML = 2;
-        document.querySelector("#resultadop3e2").innerHTML = 0;
-        document.querySelector("#resultadop4e1").innerHTML = 2;
-        document.querySelector("#resultadop4e2").innerHTML = 0;
-        document.querySelector("#resultadop5e1").innerHTML = 1;
-        document.querySelector("#resultadop5e2").innerHTML = 2;
-        document.querySelector("#resultadop6e1").innerHTML = 0;
-        document.querySelector("#resultadop6e2").innerHTML = 2;
+        document.querySelector("#resultadop1e1").innerHTML = resultadop1e1;
+        document.querySelector("#resultadop1e2").innerHTML = resultadop1e2;
+        document.querySelector("#resultadop2e1").innerHTML = resultadop2e1;
+        document.querySelector("#resultadop2e2").innerHTML = resultadop2e2;
+        document.querySelector("#resultadop3e1").innerHTML = resultadop3e1;
+        document.querySelector("#resultadop3e2").innerHTML = resultadop3e2;
+        document.querySelector("#resultadop4e1").innerHTML = resultadop4e1;
+        document.querySelector("#resultadop4e2").innerHTML = resultadop4e2;
+        document.querySelector("#resultadop5e1").innerHTML = resultadop5e1;
+        document.querySelector("#resultadop5e2").innerHTML = resultadop5e2;
+        document.querySelector("#resultadop6e1").innerHTML = resultadop6e1;
+        document.querySelector("#resultadop6e2").innerHTML = resultadop6e2;
     }
 
+    
+    
+    /* GENERACION DEL PUNTAJE */
+
+       function partido1 (){
+        if (parseInt(JSON.parse(localStorage.getItem ("golesp1e1"))) === resultadop1e1 && parseInt(JSON.parse(localStorage.getItem ("golesp1e2"))) === resultadop1e2) {
+            let resultado1 = 3;
+            return resultado1;
+   
+        } else {
+            let resultado1 = 0;
+            return resultado1;
+        }
+    }
+
+       function partido2 (){
+        if (parseInt(JSON.parse(localStorage.getItem ("golesp2e1"))) === resultadop2e1 && parseInt(JSON.parse(localStorage.getItem ("golesp2e2"))) === resultadop2e2) {
+            let resultado2 = 3;
+            return resultado2;
+   
+        } else {
+            let resultado2 = 0;
+            return resultado2;
+        }
+    }
+   
+       function partido3 (){
+       if (parseInt(JSON.parse(localStorage.getItem ("golesp3e1"))) === resultadop3e1 && parseInt(JSON.parse(localStorage.getItem ("golesp3e2"))) === resultadop3e2) {
+           let resultado3 = 3;
+           return resultado3;
+   
+       } else {
+           let resultado3 = 0;
+           return resultado3;
+       }
+   }
+   
+       function partido4 (){
+       if (parseInt(JSON.parse(localStorage.getItem ("golesp4e1"))) === resultadop4e1 && parseInt(JSON.parse(localStorage.getItem ("golesp4e2"))) === resultadop4e2) {
+           let resultado4 = 3;
+           return resultado4;
+   
+       } else {
+           let resultado4 = 0;
+           return resultado4;
+       }
+   }
+   
+       function partido5 (){
+       if (parseInt(JSON.parse(localStorage.getItem ("golesp5e1"))) === resultadop5e1 && parseInt(JSON.parse(localStorage.getItem ("golesp5e2"))) === resultadop5e2) {
+           let resultado5 = 3;
+           return resultado5;
+   
+       } else {
+           let resultado5 = 0;
+           return resultado5;
+       }
+   }
+   
+       function partido6 (){
+       if (parseInt(JSON.parse(localStorage.getItem ("golesp6e1"))) === resultadop6e1 && parseInt(JSON.parse(localStorage.getItem ("golesp6e2"))) === resultadop6e2) {
+           let resultado6 = 3;
+           return resultado6;
+   
+       } else {
+           let resultado6 = 0;
+           return resultado6;
+       }
+   }
+   
+    /* MOSTRAR PUNTAJE */
+
+    let puntajeuser = document.querySelector ("#mostrarpuntaje");
+    mostrarpuntaje.addEventListener ("click", sumaPuntaje);
+
+    function sumaPuntaje (){
+        puntajeuser = partido1 () + partido2() + partido3 () + partido4 () + partido5 () + partido6 ();
+        let div = document.createElement(`div`);
+        div.innerHTML = `<h1>Tu puntaje es de ${puntajeuser}</h1>`
+    }
+    
+    
+    
+
+    
+
+   
+       
+   
+    /* puntajeuser = document.querySelector ("#mostrarpunaje");
+    puntajeuser.addEventListener ("click", mostrarPuntaje)
+
+    function mostrarPuntaje (){
+        puntajeuser = resultado1;
+        console.log(puntajeuser);
+        return puntajeuser;
+    }
+ */
+    
+
         //  -----------FLUJO--------------
-    
-     /* login();
-    
-     alert (`Bienvenido ${user} al prode del Mundial Qatar 2022. Por cada pronostico acertado sumaras 3 puntos`)
-    
-     puntajeuser = partido1() + partido2() + partido3() + partido4() + partido5() + partido6();
+    /* 
+     login();
      */
-        // -----ACA HAGAMOS DE CUENTA QUE SE ESTAN JUGANDO LOS PARTIDOS ------
+
+    // -----ACA HAGAMOS DE CUENTA QUE SE ESTAN JUGANDO LOS PARTIDOS ------
     /* 
      alert (`Tu puntaje final es de ${puntajeuser}`);
     
